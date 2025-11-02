@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        #one {
+            background-color: #0b0b0b;
+           
+        }
+
+        .bulb-image {
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+
+        }
+
+        .cat-image {
+            width: 200px;
+            display: block;
+            margin: 0 auto;
+
+        }
+
+        .switch-board {
+            background-color: hsl(160, 100%, 50%);
+            width: 294px;
+            height: 139px;
+            border-radius: 20px;
+            padding: 16px;
+            margin: 16px;
+            display: block;
+            margin: 0 auto;
+            border: thick dotted rgb(255, 0, 242);
+            outline: thick double red;
+            margin-top: 50px;
+        }
+
+        .switch-status {
+            color: #ea00ff;
+            text-align: center;
+           
+        }
+
+        .on-switch {
+            color: #ffffff;
+            background-color: #cbd2d9;
+            font-family: "fantasy";
+            text-align: center;
+            width: 99px;
+            height: 44px;
+            border-radius: 12px;
+             position: relative;left: 60px;
+
+        }
+
+        .off-switch {
+            color: #ffffff;
+            background-color: #b81b25;
+            text-align: center;
+            width: 99px;
+            height: 44px;
+            border-radius: 12px;
+            position: relative;left: 20px;
+              
+           
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="one">
+        <div class="dark-background text-center">
+            <div>
+                <img src="bulb-go-on-img.png" class="bulb-image" id="bulbImage" />
+            </div>
+            <div>
+                <img src="cat-img.png" class="cat-image" id="catImage" />
+            </div>
+            <div class="d-flex flex-row justify-content-center pt-5">
+                <div class="switch-board">
+                    <h1 class="switch-status" id="switchStatus">Switched On</h1>
+                    <button class="off-switch" id="offSwitch" onclick="switchOff()">
+                        OFF
+                    </button>
+                    <button class="on-switch" id="onSwitch" onclick="switchOn()">
+                        ON
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function switchOff() {
+        document.getElementById("bulbImage").src =
+            "bulb-go-off-img.png";
+        document.getElementById("catImage").src =
+            "cat-eyes-img.png";
+        document.getElementById("switchStatus").textContent = "Switched Off";
+        document.getElementById("onSwitch").style.backgroundColor = "#22c55e";
+        document.getElementById("offSwitch").style.backgroundColor = "#cbd2d9";
+    }
+    function switchOn() {
+        document.getElementById("bulbImage").src =
+            "bulb-go-on-img.png";
+        document.getElementById("catImage").src =
+            "cat-img.png";
+        document.getElementById("switchStatus").textContent = "Switched On";
+        document.getElementById("offSwitch").style.backgroundColor = "#e12d39";
+        document.getElementById("onSwitch").style.backgroundColor = "#cbd2d9";
+    }</script>
+</body>
+<html>
